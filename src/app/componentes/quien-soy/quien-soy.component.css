@@ -1,0 +1,26 @@
+.quienSoy {
+    text-align: center;
+}
+
+.lista {
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    list-style-type: none;
+    padding: 20px;
+    margin: 0 auto;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.lista li {
+    margin-bottom: 10px;
+}
+
+.lista ul {
+    text-align: left;
+}
+
+img{
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  

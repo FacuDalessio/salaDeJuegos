@@ -1,44 +1,47 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterOutlet } from '@angular/router';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../../services/usuario.service';
-import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
+import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-registro',
   standalone: true,
   imports: [
-    FormsModule,
-    RouterOutlet,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,
-    RouterLink,
+    FormsModule,
     CommonModule
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './registro.component.html',
+  styleUrl: './registro.component.css'
 })
-export class LoginComponent {
+export class RegistroComponent {
+
   email: string = '';
   password: string = '';
-  credencialesInvalidas: boolean = false;
+  mailYaExistente: boolean = false;
+  contraInvalida: boolean = false;
+  mailInvalido: boolean = false;
 
   constructor(
     private router: Router,
     private usuarioService: UsuarioService,
     private firestore: Firestore
-  ){}
+  ){ }
 
-  login(): void{
-    this.credencialesInvalidas = false;
-    this.usuarioService.login(this.email, this.password)
-    .then(response =>{ 
+  registro(){
+    this.mailYaExistente = false;
+    this.mailInvalido = false;
+    this.contraInvalida = false;
+    
+    this.usuarioService.registro(this.email, this.password)
+    .then(response =>{
       let col = collection(this.firestore, 'ingresos');
       addDoc(col, { fecha: new Date(), "user": this.email})
       this.usuarioService.logeado = true;
@@ -46,12 +49,13 @@ export class LoginComponent {
     })
     .catch(error => {
       console.log(error);
-      this.credencialesInvalidas = true;
-    })
-  }
-
-  rellenar(){
-    this.email = 'mail@mail.com';
-    this.password = '123456';
+      if (error.code === 'auth/email-already-in-use') {
+        this.mailYaExistente = true;
+      } else if (error.code === 'auth/weak-password') {
+        this.contraInvalida = true;
+      } else if (error.code === 'auth/invalid-email'){
+        this.mailInvalido = true;
+      }
+    });
   }
 }

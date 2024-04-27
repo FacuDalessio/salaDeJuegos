@@ -1,0 +1,17 @@
+<div class="registro">
+    <div class="form">
+        <h1>Crear cuenta</h1>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" [(ngModel)]="password">
+        </mat-form-field>
+        <button (click)="registro()" mat-raised-button>Crear</button>
+        <p *ngIf="mailYaExistente" class="error">El mail ya esta registrado</p>
+        <p *ngIf="contraInvalida" class="error">La contraseña tiene que tener mas de 6 caracteres</p>
+        <p *ngIf="mailInvalido" class="error">El mail es invalido</p>
+    </div>
+</div>

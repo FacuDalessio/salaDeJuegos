@@ -1,0 +1,10 @@
+.navBar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.navBar button{
+    margin: 5px;
+}

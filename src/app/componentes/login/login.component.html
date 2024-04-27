@@ -1,8 +1,19 @@
-<h1>Login</h1>
-<div>
-    <input type="text" placeholder="usuario" [(ngModel)]="nombre">
-    <input type="text" placeholder="clave" [(ngModel)]="clave">
-    <button (click)="login()">Login</button>
+<div class="login">
+    <div class="form">
+        <h1>Iniciar Sesion</h1>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" [(ngModel)]="password">
+        </mat-form-field>
+        <button type="submit" mat-raised-button (click)="login()">Ingresar</button>
+        <button type="submit" mat-raised-button (click)="rellenar()">Rellenar</button>
+        <p *ngIf="credencialesInvalidas" class="error">Credenciales invalidas</p>
+        <p>Si no tenes cuenta, por favor registrarse <a routerLink="/registro">aca</a>.</p>
+    </div>
 </div>
 
 <router-outlet />
