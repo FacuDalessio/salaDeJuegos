@@ -10,8 +10,8 @@
             <input matInput type="password" [(ngModel)]="password">
         </mat-form-field>
         <button (click)="registro()" mat-raised-button>Crear</button>
-        <p *ngIf="mailYaExistente" class="error">El mail ya esta registrado</p>
+        <p *ngIf="mailYaExistente" class="error">El email ya esta registrado</p>
         <p *ngIf="contraInvalida" class="error">La contraseña tiene que tener mas de 6 caracteres</p>
-        <p *ngIf="mailInvalido" class="error">El mail es invalido</p>
+        <p *ngIf="mailInvalido" class="error">El email es invalido</p>
     </div>
 </div>

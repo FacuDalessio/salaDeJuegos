@@ -51,7 +51,7 @@ export class LoginComponent {
   }
 
   rellenar(){
-    this.email = 'mail@mail.com';
+    this.email = 'email@email.com';
     this.password = '123456';
   }
 }
