@@ -9,8 +9,8 @@
             <img src="{{cartaAMostrar}}" alt="carta">
         </div>
         <div class="botones">
-            <button mat-raised-button (click)="mayor()">Mayor</button>
-            <button mat-raised-button (click)="menor()">Menor</button>
+            <button mat-raised-button (click)="mayor()" [disabled]="botonFinalizar">Mayor</button>
+            <button mat-raised-button (click)="menor()" [disabled]="botonFinalizar">Menor</button>
         </div>
         <div class="correctoIncorrecto">
             <p class="correcto" *ngIf="correcto">Correcto!</p>
@@ -23,5 +23,6 @@
     </div>
     <div>
         <button class="reiniciar" mat-raised-button (click)="reiniciar()">Reiniciar</button>
+        <button *ngIf="botonFinalizar" class="finalizar" mat-raised-button (click)="terminar()">Finalizar</button>
     </div>
 </div>

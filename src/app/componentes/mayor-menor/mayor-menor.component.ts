@@ -75,6 +75,7 @@ export class MayorMenorComponent {
   cartaSiguiente: number = 0;
   count: number = 0;
   termino: boolean = false;
+  botonFinalizar = false;
 
   constructor(){
     this.inicializarValores();
@@ -118,6 +119,10 @@ export class MayorMenorComponent {
     this.termino = true;
   }
 
+  finalizar(){
+    this.botonFinalizar = true;
+  }
+
   sacarCarta(){
     this.cartaAhora = Math.floor(Math.random() * 48);
     while (this.cartasMostradas.includes(this.cartaAhora)) {
@@ -137,7 +142,7 @@ export class MayorMenorComponent {
     this.cartasMostradas.push(this.cartaSiguiente);
     this.cartasRestantes--;
     if (this.cartasRestantes == 0) {
-      this.terminar();
+      this.finalizar();
     }
   }
 
