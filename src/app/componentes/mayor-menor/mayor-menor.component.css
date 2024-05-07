@@ -1,0 +1,33 @@
+.juego{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+h1{
+    color: #F0EBD8;
+    margin-top: 0%;
+    font-size: 40px;
+}
+
+img{
+    width: 20%;
+}
+
+.botones button, .reiniciar{
+    margin: 5px;
+    background-color: #F0EBD8;
+}
+
+.puntosCartasRestantes, .termino{
+    color: #F0EBD8;
+}
+
+.correcto{
+    color: #90be6d;
+}
+
+.incorrecto{
+    color: #e63946;
+}
+

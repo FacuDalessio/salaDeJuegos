@@ -13,14 +13,25 @@ h1{
     display: flex;
     align-content: center;
     align-items: center;
-    margin-left: 5%;
+    margin: auto 20px;
+    text-align: center;
 }
 
-.juegoImg{
+.imgAhorcado{
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     width: 200px;
 }
 
+.imgMayorMenor{
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    width: 290px;
+}
+
 button{
     background-color: #F0EBD8;
+}
+
+div{
+    display: flex;
+    justify-content: center;
 }

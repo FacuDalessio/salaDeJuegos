@@ -70,6 +70,7 @@ export class AhorcadoComponent {
   palabraAlAzar(){
     this.palabrasService.getPalabra().subscribe(result => {
       this.palabra = result[0].toUpperCase();
+      this.palabra = this.palabra.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       console.log(this.palabra);
       this.inicializarPalabra();
       this.inicializarLetrasSeleccionadas();

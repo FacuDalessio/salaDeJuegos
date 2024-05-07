@@ -1,0 +1,27 @@
+<div class="juego">
+    <h1>Mayor o Menor</h1>
+    <div *ngIf="termino">
+        <h3 class="termino">El juego termino !</h3>
+        <p class="correcto">Puntos finales: {{puntos}}</p>
+    </div>
+    <div *ngIf="!termino">
+        <div>
+            <img src="{{cartaAMostrar}}" alt="carta">
+        </div>
+        <div class="botones">
+            <button mat-raised-button (click)="mayor()">Mayor</button>
+            <button mat-raised-button (click)="menor()">Menor</button>
+        </div>
+        <div class="correctoIncorrecto">
+            <p class="correcto" *ngIf="correcto">Correcto!</p>
+            <p class="incorrecto" *ngIf="incorrecto">Incorrecto!</p>
+        </div>
+        <div class="puntosCartasRestantes">
+            <p class="puntos">Puntos: {{puntos}}</p>
+            <p class="cartasRestantes">Cartas restantes: {{cartasRestantes}}</p>
+        </div>
+    </div>
+    <div>
+        <button class="reiniciar" mat-raised-button (click)="reiniciar()">Reiniciar</button>
+    </div>
+</div>
