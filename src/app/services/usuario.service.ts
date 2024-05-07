@@ -6,8 +6,6 @@ import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signO
 })
 export class UsuarioService {
 
-  logeado: boolean = false;
-
   constructor(private auth:Auth) { }
 
   login(email: string, password: string){
@@ -20,5 +18,9 @@ export class UsuarioService {
 
   logOut(){
     return signOut(this.auth);
+  }
+
+  getEmailLogeado(): string{
+    return JSON.parse(localStorage.getItem('email')!);
   }
 }

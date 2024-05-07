@@ -1,0 +1,33 @@
+<div class="juego">
+    <h1>Ahorcado</h1>
+    <div class="inicio" *ngIf="!empezo">
+        <button mat-raised-button (click)="palabraAlAzar()">Palabara al azar</button>
+        <button mat-raised-button (click)="escribirPalabraInput = true">Escribir palabra</button>
+        <div *ngIf="escribirPalabraInput">
+            <input matInput type="text" [(ngModel)]="palabraAux">
+            <button mat-raised-button (click)="escribirPalabra()">Usar palabra</button>
+        </div>
+    </div>
+    <div *ngIf="empezo">
+        <div class="imgPalabra">
+            <img src="{{img}}" class="img">
+            <ng-container *ngFor="let letra of letrasEncontradas; let i = index">
+                <p class="guion">{{letra}}</p>
+            </ng-container>
+        </div>
+        <div class="perdio" *ngIf="perdio">
+            <p class="sinVidas">Perdiste, te quedaste sin vidas!</p>
+            <p class="palabraEra">La palabra era: {{palabra}}</p>
+            <button mat-raised-button (click)="reiniciar()">Reiniciar</button>
+        </div>
+        <div class="gano" *ngIf="gano">
+            <p>Ganaste !!</p>
+            <button mat-raised-button (click)="reiniciar()">Reiniciar</button>
+        </div>
+        <div class="letras">
+            <ng-container *ngFor="let letra of letras; let i = index">
+                <button [disabled]="letrasSeleccionadas[i]" mat-raised-button class="letra" (click)="eleccionLetra(letra)">{{letra}}</button>
+            </ng-container>
+        </div>
+    </div>
+</div>

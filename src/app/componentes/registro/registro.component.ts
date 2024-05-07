@@ -44,7 +44,9 @@ export class RegistroComponent {
     .then(response =>{
       let col = collection(this.firestore, 'ingresos');
       addDoc(col, { fecha: new Date(), "user": this.email})
-      this.usuarioService.logeado = true;
+      if (typeof localStorage !== 'undefined'){
+        localStorage.setItem('email', JSON.stringify(this.email));
+      }
       this.router.navigate(['/']);
     })
     .catch(error => {

@@ -3,9 +3,5 @@
 html, body { height: 100%; }
 body { 
     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
-    /* background-image: url('assets/img/fondo2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
-    /* background-color: #FFF8EF; */
+    background-color: #1D2D44;
 }

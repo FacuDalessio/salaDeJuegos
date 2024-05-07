@@ -1,8 +1,18 @@
 <div class="navBar">
-    <button mat-raised-button routerLink="/login" *ngIf="!usuarioService.logeado">Login</button>
-    <button mat-raised-button *ngIf="usuarioService.logeado" (click)="logOut()">LogOut</button>
-    <button mat-raised-button routerLink="/quienSoy">¿Quien soy?</button>
-    <button routerLink="/home" mat-icon-button color="primary">
+    <button mat-raised-button routerLink="/login" *ngIf="usuarioService.getEmailLogeado() == ''" class="btn">Login</button>
+    <button mat-raised-button routerLink="/quienSoy" class="btn">¿Quien soy?</button>
+    <button routerLink="/home" mat-icon-button color="primary" class="icon">
         <mat-icon>home</mat-icon>
     </button>
+    <button *ngIf="usuarioService.getEmailLogeado() != ''" mat-icon-button [matMenuTriggerFor]="menu" class="icon">
+    <mat-icon>account_circle</mat-icon> 
+    </button>
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item class="menu">
+        <span>{{ usuarioService.getEmailLogeado() }}</span>
+    </button>
+    <button mat-menu-item (click)="logOut()" class="menu">
+        <span>LogOut</span>
+    </button>
+    </mat-menu>
 </div>

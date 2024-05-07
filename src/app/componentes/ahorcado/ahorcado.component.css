@@ -1,0 +1,71 @@
+.juego{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.guion{
+    color: #F0EBD8;
+    font-size: 300%;
+    margin: 0.5%;
+}
+
+.imgPalabra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    width: 28%;
+}
+
+h1{
+    color: #F0EBD8;
+    margin-top: 0%;
+    font-size: 50px;
+}
+
+.perdio .sinVidas{
+    color: #e63946;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.perdio .palabraEra{
+    color: #e63946;
+    font-size: large;
+    font-weight: 500;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+
+.gano p{
+    color: #90be6d;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.perdio button, .gano button{
+    margin-bottom: 5px;
+    background-color: #F0EBD8;
+}
+
+.letra{
+    margin: 2px;
+    font-size: large;
+    background-color: #F0EBD8;
+
+}
+
+.letras{
+    width: 50%;
+    margin: 10px auto;
+}
+
+.inicio button{
+    background-color: #F0EBD8;
+    margin: 5px;
+}

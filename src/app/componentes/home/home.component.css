@@ -1,4 +1,26 @@
 h1{
     text-align: center;
     margin-top: 0;
+    color: #F0EBD8;
+}
+
+.juegoCard{
+    max-width: 400px;
+    background-color: rgb(62, 92, 118);
+    box-shadow: 0px 0px 10px rgba(62, 92, 118, 0.5);
+    border-radius: 10px;
+    color: #F0EBD8;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.juegoImg{
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    width: 200px;
+}
+
+button{
+    background-color: #F0EBD8;
 }

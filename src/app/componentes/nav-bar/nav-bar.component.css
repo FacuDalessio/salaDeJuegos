@@ -8,3 +8,11 @@
 .navBar button{
     margin: 5px;
 }
+
+.navBar .btn{
+    background-color: #F0EBD8;
+}
+
+.navBar .icon{
+    color: #F0EBD8;
+}
