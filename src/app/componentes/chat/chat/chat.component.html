@@ -1,0 +1,32 @@
+<button mat-icon-button class="icon" (click)="mostrarChat = true" *ngIf="!mostrarChat && usuarioService.getEmailLogeado()">
+    <mat-icon class="icono">message</mat-icon>
+</button>
+
+<div class="card text-center chat" *ngIf="mostrarChat && usuarioService.getEmailLogeado()">
+    <div class="card-header">
+        <p class="titulo">Chat</p>
+        <button mat-icon-button class="cerrar" (click)="mostrarChat = false">
+        <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="card-body">
+        <div  class="contenedorMensajes" #mensajeContainer>
+            <ng-container *ngFor="let mensaje of mensajes">
+                <div [ngClass]="mensaje.usuario == usuarioService.getEmailLogeado() ? 'enviado' : 'recibido'">
+                    <p [ngClass]="mensaje.usuario == usuarioService.getEmailLogeado() ? 'enviado' : 'recibido'">{{mensaje.mensaje}}</p>
+                    <p class="nombre">{{ mensaje.usuario }} {{ mensaje.hora | date: 'hh:mm a' }}</p>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <form class="input-group mb-3" (ngSubmit)="enviarMensaje()">
+            <input type="text" class="form-control" placeholder="Ingrese su mensaje" 
+            [(ngModel)]="nuevoMensaje" [ngModelOptions]="{standalone: true}">
+            <span class="input-group-text" id="basic-addon2" (click)="enviarMensaje()">
+                <img src="../../../../assets/iconos/enviar.png" class="img">
+            </span>
+        </form>
+    </div>
+</div>
+

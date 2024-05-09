@@ -1,0 +1,103 @@
+.chat{
+    width: 20%;
+    height: 55%;
+    position: fixed;
+    right: 0.5%;
+    bottom: 0.5%;
+    background-color: #F0EBD8;
+    color: #0D1321;
+}
+
+.img{
+    width: 20px;
+}
+
+.titulo, .cerrar{
+    margin-bottom: 0px;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 12%;
+}
+
+.icon{
+    color: #F0EBD8;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    width: 5%;
+    height: 8%;
+}
+.card-footer{
+    max-height: 13%;
+    margin: auto 0px;
+}
+
+.icono{
+    font-size:48px !important;
+    width:48px;                
+    height:48px; 
+}
+
+p.enviado{
+    display: block;
+    float: right;
+    background-color: teal;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    max-width: 100%;
+    align-content: end;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding-right: 3%;
+}
+
+p.recibido{
+    display: block;
+    float: left;
+    background-color: grey;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 3%;
+    max-width: 100%;
+    margin-bottom: 0px;
+    align-content: start;
+    margin-bottom: 0px;
+    margin-right: auto;
+}
+
+.contenedorMensajes{
+    max-height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.contenedorMensajes::-webkit-scrollbar{
+    display: none;
+}
+
+.card-body{
+    max-height: 75%;
+}
+
+.hora, .nombre{
+    vertical-align: middle;
+    margin: 0%;
+    padding: 0%;
+    display: inline-block;
+    font-size: xx-small;
+    width: 50%;
+}
