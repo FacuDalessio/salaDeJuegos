@@ -1,0 +1,32 @@
+.img{
+    max-width: 25%;
+}
+
+.body{
+    text-align: center;
+}
+
+.titulo, .pregunta, .puntos{
+    color: #F0EBD8;
+}
+
+.opciones, .reinciar{
+    background-color: #F0EBD8;
+    margin: 0.2%;
+}
+
+.divOpciones {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.correcto{
+    margin-top: 1%;
+    color: #90be6d;
+}
+
+.incorrecto{
+    margin-top: 1%;
+    color: #e63946;
+}

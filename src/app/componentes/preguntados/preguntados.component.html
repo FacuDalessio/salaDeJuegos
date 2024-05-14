@@ -1,0 +1,18 @@
+<div class="body">
+    <h1 class="titulo">Preguntados</h1>
+    <img src="{{img}}" alt="imgPregunta" class="img" *ngIf="!reiniciar">
+    <p class="pregunta" *ngIf="!reiniciar">{{pregunta}}</p>
+    <div class="divOpciones" *ngIf="!reiniciar">
+        <button mat-raised-button class="opciones" (click)="jugar(opcionA)">{{opcionA}}</button>
+        <button mat-raised-button class="opciones" (click)="jugar(opcionB)">{{opcionB}}</button>
+        <button mat-raised-button class="opciones" (click)="jugar(opcionC)">{{opcionC}}</button>
+        <button mat-raised-button class="opciones" (click)="jugar(opcionD)">{{opcionD}}</button>
+    </div>
+    <div class="correctoIncorrecto" *ngIf="!reiniciar">
+        <p class="correcto" *ngIf="correcto">Correcto!</p>
+        <p class="incorrecto" *ngIf="incorrecto">Incorrecto!</p>
+    </div>
+    <p class="puntos" *ngIf="!reiniciar">Puntos: {{puntos}}</p>
+    <p class="puntos" *ngIf="reiniciar">Puntos Finales: {{puntos}}</p>
+    <button mat-raised-button *ngIf="reiniciar" class="reinciar" (click)="reiniciarJuego()">Reinciar</button>
+</div>

@@ -28,5 +28,9 @@ export const routes: Routes = [
     { path: 'mayorMenor',
         loadComponent: () => import('./componentes/mayor-menor/mayor-menor.component').then(c => c.MayorMenorComponent),
         ...canActivate(()=> redirectUnauthorizedTo(['/login']))
+    },
+    { path: 'preguntados',
+        loadComponent: () => import('./componentes/preguntados/preguntados.component').then(c => c.PreguntadosComponent),
+        ...canActivate(()=> redirectUnauthorizedTo(['/login']))
     }
 ];

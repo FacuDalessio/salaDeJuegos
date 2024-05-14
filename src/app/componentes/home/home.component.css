@@ -13,7 +13,7 @@ h1{
     display: flex;
     align-content: center;
     align-items: center;
-    margin: auto 20px;
+    margin: 3%;
     text-align: center;
 }
 
@@ -31,7 +31,20 @@ button{
     background-color: #F0EBD8;
 }
 
-div{
-    display: flex;
-    justify-content: center;
+.juegoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    place-items: center; /* Esto centrará vertical y horizontalmente las tarjetas */
+    margin: auto; 
+    max-width: 60%; 
+}
+
+.body{
+    background-color: #1D2D44;
+}
+
+.link a{
+    color: #F0EBD8;
 }

@@ -1,36 +1,74 @@
-<h1>Sala de Juegos</h1>
+<div class="body">
+    <h1>Sala de Juegos</h1>
 
-<div>
-    <mat-card class="juegoCard">
-        <mat-card-header>
-            <mat-card-title>Ahorcado</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="../../../assets/ahorcado/img7.png" alt="Ahorcado" class="imgAhorcado">
-        <mat-card-content>
-            <p>
-              El famoso juego ahorcado, se tiene que adivinar una palabra, poniendo letra por letra.
-              Si la letra indicada no se encuentra, se pierde una vida, el jugador cuenta con 6 vidas.
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button routerLink="/ahorcado">JUGAR</button>
-        </mat-card-actions>
-    </mat-card>
-    
-    <mat-card class="juegoCard">
-        <mat-card-header>
-            <mat-card-title>Mayor o Menor</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="../../../assets/img/mayorMenor.png" alt="Mayor menor" class="imgMayorMenor">
-        <mat-card-content>
-            <p>
-              Ves una carta y tenes que decir si la proxima carta va a ser mayor o menor.
-              Si acertas sumas un 1 punto, asi hasta terminar el mazo.
-              Se juega con cartas españolas.
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button routerLink="/mayorMenor">JUGAR</button>
-        </mat-card-actions>
-    </mat-card>
+    <div class="juegoContainer">
+        <mat-card class="juegoCard">
+            <mat-card-header>
+                <mat-card-title>Ahorcado</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="../../../assets/ahorcado/img7.png" alt="Ahorcado" class="imgAhorcado">
+            <mat-card-content>
+                <p>
+                El famoso juego ahorcado, se tiene que adivinar una palabra, poniendo letra por letra.
+                Si la letra indicada no se encuentra, se pierde una vida, el jugador cuenta con 6 vidas.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button routerLink="/ahorcado">JUGAR</button>
+            </mat-card-actions>
+        </mat-card>
+        
+        <mat-card class="juegoCard">
+            <mat-card-header>
+                <mat-card-title>Mayor o Menor</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="../../../assets/img/mayorMenor.png" alt="Mayor menor" class="imgMayorMenor">
+            <mat-card-content>
+                <p>
+                Ves una carta y tenes que decir si la proxima carta va a ser mayor o menor.
+                Si acertas sumas un 1 punto, asi hasta terminar el mazo.
+                Se juega con cartas españolas.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button routerLink="/mayorMenor">JUGAR</button>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="juegoCard">
+            <mat-card-header>
+                <mat-card-title>Preguntados</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="../../../assets/img/preguntados.png" alt="Preguntados" class="imgPreguntados">
+            <mat-card-content>
+                <p>
+                Clasico juego de preguntas y respuestas.
+                Se te muestra una imagen con una pregunta y tenes que elegir la opcion correcta.
+                Si acertas ganas un punto. Son 5 preguntas.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button routerLink="/preguntados">JUGAR</button>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="juegoCard">
+            <mat-card-header>
+                <mat-card-title>Truco</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="../../../assets/img/truco.jpeg" alt="Preguntados" class="imgTruco">
+            <mat-card-content>
+                <p>
+                    El juego de cartas mas famoso de la argentina.
+                    Se juega solamente a 10 puntos. 
+                    Solamente con truco y envido.
+                    Podes ver mas en detalle las reglas en la seccion: <span class="link"><a href="/quienSoy">¿Quien soy?</a></span> 
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button routerLink="/preguntados">JUGAR</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
 </div>
