@@ -131,7 +131,6 @@ export class MayorMenorComponent {
     this.cartasMostradas.push(this.cartaAhora);
     this.cartasRestantes--;
     this.count++;
-    console.log(this.count);
   }
 
   sacarCartaSiguiente(){

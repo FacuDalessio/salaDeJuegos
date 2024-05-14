@@ -1,0 +1,27 @@
+.juego{
+    text-align: center;
+    background-color: #1D2D44;  
+}
+
+.titulo, .manosGanadas, .puntos{
+    color: #F0EBD8;
+}
+
+.carta{
+    margin: 1%;
+    max-width: 8%;
+}
+
+.containerMesa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manosGanadas{
+    margin: auto 5%;
+}
+
+.reiniciar{
+    background-color: #F0EBD8;
+}

@@ -1,0 +1,22 @@
+<div class="juego">
+    <h1 class="titulo">Truco</h1>
+    <div class="cartasRival">
+        <img *ngIf="cartaRival1" src="../../../assets/cartas/trasera.jpeg" alt="carta1" class="carta">
+        <img *ngIf="cartaRival2" src="../../../assets/cartas/trasera.jpeg" alt="carta2" class="carta">
+        <img *ngIf="cartaRival3" src="../../../assets/cartas/trasera.jpeg" alt="carta3" class="carta">
+    </div>
+    <div class="mesa">
+        <div class="containerMesa">
+            <p class="manosGanadas">Mano ganadas rival: {{manosGanadasRival}}</p>
+            <img *ngIf="cartaMesa1" src="{{cartaMesa1}}" alt="carta1" class="carta">
+            <img *ngIf="cartaMesa2" src="{{cartaMesa2}}" alt="carta2" class="carta">
+            <p class="manosGanadas">Mano ganadas jugador: {{manosGanadasJugador}}</p>
+        </div>
+    </div>
+    <div class="cartasJugador">
+        <img *ngIf="cartaJugador1" src="{{cartaJugador1}}" alt="carta1" class="carta" (click)="jugarCarta1()">
+        <img *ngIf="cartaJugador2" src="{{cartaJugador2}}" alt="carta2" class="carta" (click)="jugarCarta2()">
+        <img *ngIf="cartaJugador3" src="{{cartaJugador3}}" alt="carta3" class="carta" (click)="jugarCarta3()">
+    </div>
+    <button *ngIf="btnJugarDevuelta" class="reiniciar" mat-raised-button (click)="reiniciar()">Jugar devuelta</button>
+</div>

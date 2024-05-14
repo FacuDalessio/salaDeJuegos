@@ -32,5 +32,9 @@ export const routes: Routes = [
     { path: 'preguntados',
         loadComponent: () => import('./componentes/preguntados/preguntados.component').then(c => c.PreguntadosComponent),
         ...canActivate(()=> redirectUnauthorizedTo(['/login']))
+    },
+    { path: 'truco',
+        loadComponent: () => import('./componentes/truco/truco.component').then(c => c.TrucoComponent),
+        ...canActivate(()=> redirectUnauthorizedTo(['/login']))
     }
 ];
