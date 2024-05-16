@@ -37,6 +37,16 @@ export class ChatComponent implements OnInit{
 
   ngOnInit(): void {
       this.obtenerMensajesDb();
+      setTimeout(() => {
+        this.scrollAlUltimoMensaj();
+      });
+  }
+
+  abrirConScroll(){
+    this.mostrarChat = true;
+    setTimeout(() => {
+      this.scrollAlUltimoMensaj();
+    });
   }
 
   enviarMensaje(){
