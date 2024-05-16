@@ -154,7 +154,7 @@ export class TrucoComponent {
       setTimeout(()=>{
         const cartaMesa1Aux = this.cartaMesa1Valor.split("-")[2];
         const cartaMesa2Aux = this.cartaMesa2Valor.split("-")[2];
-        if (cartaMesa1Aux > cartaMesa2Aux) {
+        if (parseInt(cartaMesa1Aux, 10) > parseInt(cartaMesa2Aux, 10)) {
           this.quienJuega = 'rival';
           this.manosGanadasRival++;
           this.jugarCartaRival();
