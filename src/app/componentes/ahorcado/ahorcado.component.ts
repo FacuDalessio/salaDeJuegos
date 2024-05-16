@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { PalabrasService } from '../../services/palabras/palabras.service';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-ahorcado',
@@ -34,14 +33,13 @@ export class AhorcadoComponent {
   gano: boolean = false;
   aciertos: number = 0;
   letrasSeleccionadas: boolean[] = [];
-  empezo: boolean = false;
   escribirPalabraInput: boolean = false;
   palabrasAlAzar: string[] = [];
 
   constructor(
     private palabrasService: PalabrasService
   ){
-    
+    this.palabraAlAzar();
   }
 
   eleccionLetra(letra: string){
@@ -74,17 +72,7 @@ export class AhorcadoComponent {
       console.log(this.palabra);
       this.inicializarPalabra();
       this.inicializarLetrasSeleccionadas();
-      this.empezo = true;
     });
-  }
-
-
-  escribirPalabra(){
-    this.palabra = this.palabraAux.toUpperCase();
-    console.log(this.palabra);
-    this.inicializarPalabra();
-    this.inicializarLetrasSeleccionadas();
-    this.empezo = true;
   }
 
   reiniciar(){
@@ -95,9 +83,9 @@ export class AhorcadoComponent {
     this.perdio = false;
     this.gano = false;
     this.letrasSeleccionadas = [];
-    this.empezo = false;
     this.escribirPalabraInput = false;
     this.palabraAux = '';
+    this.palabraAlAzar();
   }
 
   cambiarImagen(){
