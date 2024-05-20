@@ -1,6 +1,6 @@
 <div class="body">
     <h1 class="titulo">Preguntados</h1>
-    <img src="{{img}}" alt="imgPregunta" class="img" *ngIf="!reiniciar">
+    <img [src]="img" alt="imgPregunta" class="img" *ngIf="!reiniciar">
     <p class="pregunta" *ngIf="!reiniciar">{{pregunta}}</p>
     <div class="divOpciones" *ngIf="!reiniciar">
         <button mat-raised-button class="opciones" (click)="jugar(opcionA)">{{opcionA}}</button>
